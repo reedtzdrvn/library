@@ -1,0 +1,8 @@
+venv
+.dockerignore
+**/node_modules
+node_modules
+.git/
+.github/
+build
+**/.git
