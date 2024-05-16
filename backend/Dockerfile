@@ -5,7 +5,7 @@ FROM python:3.11
 WORKDIR /backend
 
 # 
-COPY ./requirements/requirements.txt /backend/requirements/requirements.txt
+COPY ./requirements/requirements.txt ./requirements/requirements.txt
 
 # 
 RUN pip install --no-cache-dir --upgrade -r /requirements/requirements.txt
