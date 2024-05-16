@@ -4,7 +4,7 @@ FROM python:3.11
 # 
 WORKDIR /backend
 
-EXPOSE 8000
+# EXPOSE 8000
 
 # 
 COPY ./requirements/requirements.txt ./requirements/requirements.txt
@@ -25,4 +25,4 @@ COPY nginx.conf /etc/nginx/conf.d
 # CMD ["nginx", "-g", "daemon off;"]
 
 # 
-CMD ["uvicorn", "src.main:app & nginx -g 'daemon off;'"]
+CMD ["sh", "-c", "uvicorn src.main:app & nginx -g 'daemon off;'"]
