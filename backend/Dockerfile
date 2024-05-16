@@ -25,4 +25,4 @@ COPY nginx.conf /etc/nginx/conf.d
 # CMD ["nginx", "-g", "daemon off;"]
 
 # 
-CMD ["sh", "-c", "uvicorn src.main:app & nginx -g 'daemon off;'"]
+CMD ["sh", "-c", "uvicorn src.main:app && nginx -g daemon off;"]
