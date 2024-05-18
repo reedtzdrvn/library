@@ -5,6 +5,8 @@ import Authors from "./components/Authors/Authors";
 import MyBooks from "./components/MyBooks/MyBooks";
 import Search from "./components/Search/Search";
 
+import NotFound from "./components/NotFound/NotFound";
+
 import { Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -17,6 +19,7 @@ const App = () => {
         <Route exact path="/authors" element={<Authors />} />
         <Route exact path="/my-books" element={<MyBooks/>} />
         <Route exact path="/search" element={<Search />} />
+        <Route exact path="/*" element={<NotFound />} />
       </Routes>
     </div>
   )
