@@ -19,9 +19,23 @@ RUN npm i --omit=dev
 COPY . /frontend
 
 # Build the app
-RUN npm run build
+
+RUN npx react-scripts build
+
+#WORKDIR /usr/share/nginx/html
+
+#RUN rm -rf ./*
 
 # Use Nginx to serve the build files
-FROM nginx:alpine
+#FROM nginx:alpine
 #COPY --from=build /frontend/build /usr/share/nginx/html
-COPY --from=build /frontend/build /var/www/reedtzdev/frontend
+
+#COPY --from=build /frontend/nginx_config.conf /etc/nginx/conf.d/default.conf
+
+#WORKDIR /usr/share/nginx/html
+
+#COPY --from=build /frontend/build .
+
+#ENTRYPOINT ["nginx", "-g", "daemon off;"]
+#RUN rm /etc/nginx/conf.d/default.conf
+#COPY --from=build /frontend/nginx.conf /etc/nginx/conf.d/
