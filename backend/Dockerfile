@@ -6,7 +6,7 @@ WORKDIR /backend
 # 
 COPY ./requirements/requirements.txt ./requirements/requirements.txt
 
-# hi
+#
 RUN pip install --no-cache-dir --upgrade -r ./requirements/requirements.txt
 
 # 
