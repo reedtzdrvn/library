@@ -72,10 +72,14 @@ const Header = () => {
       <div className="header_right auth h-full">
         <div className="flex gap-8 h-full">
           <div className="h-full flex items-center cursor-pointer border-b-2 border-transparent hover:border-[#e84565] hover:text-[#e84565] transition">
+            <NavLink to={'/login'}>
             <span>Логин</span>
+            </NavLink>
           </div>
           <div className="h-full flex items-center cursor-pointer border-b-2 border-transparent hover:border-[#e84565] hover:text-[#e84565] transition">
+            <NavLink to={'/register'}>
             <span>Регистрация</span>
+            </NavLink>
           </div>
         </div>
       </div>

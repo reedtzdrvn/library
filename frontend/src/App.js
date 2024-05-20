@@ -8,6 +8,8 @@ import Search from "./components/Search/Search";
 import NotFound from "./components/NotFound/NotFound";
 
 import { Routes, Route } from "react-router-dom";
+import Login from "./components/Login/Login";
+import Registration from './components/Registration/Registration'
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
         <Route exact path="/authors" element={<Authors />} />
         <Route exact path="/my-books" element={<MyBooks/>} />
         <Route exact path="/search" element={<Search />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/register" element={<Registration />} />
         <Route exact path="/*" element={<NotFound />} />
       </Routes>
     </div>
